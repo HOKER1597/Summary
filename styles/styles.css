@@ -170,7 +170,7 @@ body {
 /* education styles */
 
 .education {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .education-university {
@@ -262,4 +262,76 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+}
+
+.form-section {
+    padding-top: 0px;
+}
+
+.form-conteiner {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 32px;
+    padding-bottom: 60px;
+    width: 573px;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.form-field-email {
+    margin-bottom: 48px;
+}
+
+.form-field-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin-bottom: 8px;
+}
+
+.form-field-input {
+    width: 453px;
+    height: 60px;
+    border: 1px solid #005BBB;
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1D1F;
+}
+
+.form-button {
+    background: #FF6B0A;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFEFE;
+    border: none;
+    outline: none;
+    padding-top: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    cursor: pointer;
 }
