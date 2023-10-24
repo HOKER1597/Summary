@@ -345,18 +345,17 @@
             <!--Form-->
             <div class="reveal form-section">
                 <form action="#" class="form-conteiner" id="form" name="contact" netlify>
-                    <h3 class="form-title">Please write your message, and I'll reply.</h3>
-                    <div class="form-field">
-                        <label for="user-email" class="form-field-label">Email</label>
+                    <h3 class="title">Please write your message, and I'll reply.</h3>
+                    <div class="form-field-email">
                         <input type="email" class="form-field-input" name="email" id="user-email" required>
+                        <label for="user-email" class="form-field-label">Email</label>
                     </div>
-                    <div class="form-field form-field-text">
-                        <label for="user-name" class="form-field-label">Message</label>
-                        <input type="text" class="form-field-input" name="message" id="user-message" required>
+                    <div class="form-field-text">
+                        <textarea class="form-field-input" name="message" id="user-message" required></textarea>
+                        <label for="user-message" class="form-field-label">Message</label>
                     </div>
                     <button class="form-button" id="launch-btn">Submit</button>
                 </form>
-
             </div>
         </div>
         <!--Sidebar-->
