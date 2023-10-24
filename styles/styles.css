@@ -35,7 +35,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    color: #1B1D1F;
     margin-bottom: 20px;
 }
 
@@ -44,7 +44,7 @@ body {
     font-weight: 700;
     font-size: 45px;
     line-height: 55px;
-    color: #000000;
+    color: #1B1D1F;
     margin-bottom: 25px;
     margin-right: 230px;
 }
@@ -73,7 +73,7 @@ body {
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
-    color: #000000;
+    color: #1B1D1F;
     margin-bottom: 10px;
     cursor: pointer;
     margin-left: 0;
@@ -142,7 +142,7 @@ details desc[open] summary .dots {
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
-    color: #000000;
+    color: #1B1D1F;
 }
 
 .project,
@@ -177,7 +177,7 @@ details desc[open] summary .dots {
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    color: #000000;
+    color: #1B1D1F;
     margin-bottom: 10px;
 }
 
@@ -203,7 +203,7 @@ details desc[open] summary .dots {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    color: #000000;
+    color: #1B1D1F;
 }
 
 .work-list {
@@ -225,7 +225,7 @@ details desc[open] summary .dots {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: #000000;
+    color: #1B1D1F;
 }
 
 .link_project {
@@ -256,7 +256,7 @@ details desc[open] summary .dots {
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    color: #1B1D1F;
 }
 
 
@@ -363,6 +363,10 @@ details desc[open] summary .dots {
 .active.soft-skills {
     animation: fade-left 1s ease-in;
 }
+.active.form-section{
+    animation: fade 1.5s ease-in;
+}
+
 
 @keyframes fade {
     0% {
@@ -417,8 +421,7 @@ details desc[open] summary .dots {
     }
 }
 
-
-/*.form-section {
+.form-section {
     padding-top: 0px;
 }
 
@@ -449,7 +452,7 @@ details desc[open] summary .dots {
     margin-bottom: 24px;
 }
 
-.form-field-email {
+.form-field-text {
     margin-bottom: 48px;
 }
 
@@ -464,7 +467,7 @@ details desc[open] summary .dots {
 .form-field-input {
     width: 453px;
     height: 60px;
-    border: 1px solid #005BBB;
+    border: 1px solid rgba(30, 41, 57, 1);
     border-radius: 8px;
     padding-left: 8px;
     padding-right: 8px;
@@ -475,7 +478,7 @@ details desc[open] summary .dots {
 }
 
 .form-button {
-    background: #FF6B0A;
+    background: #FB6D3A;
     border-radius: 8px;
     font-weight: 400;
     font-size: 16px;
@@ -488,4 +491,4 @@ details desc[open] summary .dots {
     padding-right: 24px;
     padding-bottom: 12px;
     cursor: pointer;
-}*/
+}
