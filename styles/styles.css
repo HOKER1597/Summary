@@ -27,6 +27,7 @@ body {
 
 .about {
     margin-bottom: 40px;
+    animation: fade 1s ease-in;
 }
 
 .about-position {
@@ -45,6 +46,7 @@ body {
     line-height: 55px;
     color: #000000;
     margin-bottom: 25px;
+    margin-right: 230px;
 }
 
 .about-description {
@@ -61,20 +63,77 @@ body {
 
 .projects {
     margin-bottom: 50px;
+    margin-left: 0;
+    animation: fade 1s ease-in;
 }
 
 .title {
+    display: inline;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
     color: #000000;
     margin-bottom: 10px;
+    cursor: pointer;
+    margin-left: 0;
 }
+
+details summary {
+    list-style: none;
+}
+
+details summary::before {
+    content: '\21AC';
+    transition: transform .4s ease, content .4s ease;
+}
+
+details[open] summary::before {
+    content: '\21AC';
+    transform: scaleX(-1) rotate(90deg);
+    display: inline-block;
+}
+
+details:not([open]) summary::before {
+    transform: scaleX(1) rotate(0deg);
+    content: '\21AC';
+    display: inline-block;
+}
+
+details.desc summary::after {
+    content: attr(data-close);
+}
+
+details.desc[open] summary::after {
+    content: attr(data-open);
+}
+
+
+/*details desc summary .dots {
+    display: none;
+}
+
+details desc[open] summary .dots {
+    display: inline;
+    animation: dotsAnimation 1s steps(3, end) infinite;
+}
+
+@keyframes dotsAnimation {
+    0%,
+    100% {
+        content: '...';
+    }
+    33% {
+        content: '..';
+    }
+    66% {
+        content: '.';
+    }
+}*/
 
 .projects-list {
     padding: 0;
-    margin-left: 15px;
+    margin-left: 25px;
 }
 
 .project-item,
@@ -87,12 +146,18 @@ body {
 }
 
 .project,
-.project-link {
+.project-link,
+.href {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: #595959;
+}
+
+.href {
+    display: inline-block;
+    width: 300px;
 }
 
 .project-link {
@@ -104,6 +169,7 @@ body {
 
 .work {
     margin-bottom: 45px;
+    display: flex;
 }
 
 .work-position {
@@ -173,6 +239,10 @@ body {
     margin-bottom: 20px;
 }
 
+.education .title {
+    cursor: text;
+}
+
 .education-university {
     font-style: normal;
     font-weight: 700;
@@ -201,6 +271,7 @@ body {
 .photo {
     width: 370px;
     margin-bottom: 50px;
+    animation: fade .5s ease-in;
 }
 
 .sidebar-title {
@@ -223,6 +294,10 @@ body {
 }
 
 .tech-skills {
+    padding-bottom: 45px;
+}
+
+.soft-skills {
     padding-bottom: 45px;
 }
 
@@ -264,7 +339,86 @@ body {
     line-height: 24px;
 }
 
-.form-section {
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+
+/*.active.title {
+    animation: fade 1.3s ease-in;
+}*/
+
+.active.company,
+.active.education {
+    animation: fade-right 1s ease-in;
+}
+
+.active.contacts,
+.active.tech-skills,
+.active.soft-skills {
+    animation: fade-left 1s ease-in;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/*.form-section {
     padding-top: 0px;
 }
 
@@ -334,4 +488,4 @@ body {
     padding-right: 24px;
     padding-bottom: 12px;
     cursor: pointer;
-}
+}*/
