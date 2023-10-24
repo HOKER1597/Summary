@@ -142,13 +142,13 @@ const summary = document.querySelector('details.desc summary');
 
 
 
-/*const form = document.querySelector('#form');
+const form = document.querySelector('#form');
 const launchBtn = document.querySelector('#launch-btn');
 const goToFormButton = document.querySelector('#go-to-form-btn');
 const userEmailField = document.querySelector('#user-email');
 
 
-goToFormButton.addEventListener('click', function (e) {
+goToFormButton.addEventListener('click', function(e) {
     e.preventDefault();
     form.scrollIntoView();
 });
@@ -156,7 +156,7 @@ goToFormButton.addEventListener('click', function (e) {
 function clearFormFields() {
     const modalFiends = formModal.querySelectorAll('input');
 
-    modalFiends.forEach( field => { 
+    modalFiends.forEach(field => {
         field.value = ''
     });
 }
@@ -182,23 +182,22 @@ form.addEventListener('submit', e => {
 
     launchBtn.setAttribute('disabled', true)
 
-    if (userEmailField?.value?.length > 30) {
+    if (userEmailField ?.value ?.length > 30) {
         return;
     }
 
     fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
-        showGooseAnim();
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+        .then(() => {
+            showGooseAnim();
 
-        setTimeout(() => {
-            // launchBtn.removeAttribute('disabled')
-            // clearFormFields();
-        }, 2000);
-      })
-      .catch((error) => console.log('Sending form failed'));
+            setTimeout(() => {
+                // launchBtn.removeAttribute('disabled')
+                // clearFormFields();
+            }, 2000);
+        })
+        .catch((error) => console.log('Sending form failed'));
 })
-*/
