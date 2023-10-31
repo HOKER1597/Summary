@@ -141,7 +141,6 @@ const summary = document.querySelector('details.desc summary');
 
 
 
-
 const form = document.querySelector('#form');
 const launchBtn = document.querySelector('#launch-btn');
 const goToFormButton = document.querySelector('#go-to-form-btn');
@@ -159,20 +158,6 @@ function clearFormFields() {
     modalFiends.forEach(field => {
         field.value = ''
     });
-}
-
-
-function showGooseAnim() {
-    const targetContainer = document.querySelector('#form');
-    const gusImage = document.createElement('img');
-    gusImage.setAttribute('src', './img/gus-anim.gif');
-    gusImage.classList.add('gus-anim');
-
-    targetContainer.appendChild(gusImage);
-
-    setTimeout(2000, () => {
-        targetContainer.removeChild(gusImage);
-    })
 }
 
 
