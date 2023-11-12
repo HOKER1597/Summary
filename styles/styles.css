@@ -357,19 +357,14 @@ body {
 
 .contacts,
 .tech-skills,
-.soft-skills {
+.soft-skills,
+.contacts-link {
     margin-left: 40px;
 }
 
+.tech-skills,
+.soft-skills,
 .contacts {
-    margin-bottom: 50px;
-}
-
-.tech-skills {
-    padding-bottom: 45px;
-}
-
-.soft-skills {
     padding-bottom: 45px;
 }
 
@@ -410,7 +405,51 @@ body {
     font-size: 14px;
     line-height: 24px;
 }
+  
+  /* Contacts link */
 
+.contacts-link {
+    padding-bottom: 50px;
+    position: relative;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+.contacts-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #313638;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+.icon {
+    width: 26px;
+    height: 26px;
+    padding-left: 12px;
+    padding-top: 10px;
+    fill: #fff;
+  }
+
+.contacts-button:nth-child(2):hover {
+    background-color: #0A66C2;
+  }
+  
+.contacts-button:nth-child(3):hover {
+    background-color: #181616;
+  }
+  
+ .contacts-button:nth-child(4):hover {
+    background-color: #0866FF;
+  }
+  
+.contacts-button:nth-child(5):hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040);
+  }
 
 /* drop-down list */
 
@@ -462,7 +501,8 @@ details.desc[open] summary::after {
 
 .active.contacts,
 .active.tech-skills,
-.active.soft-skills {
+.active.soft-skills,
+.active.contacts-link {
     animation: fade-left 1s ease-in;
 }
 
