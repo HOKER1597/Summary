@@ -507,7 +507,7 @@ details.desc[open] summary::after {
 }
 
 .active.form-section {
-    animation: fade 1.5s ease-in;
+    animation: fade 2s ease-in;
 }
 
 
