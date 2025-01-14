@@ -434,19 +434,19 @@ body {
     fill: #fff;
   }
 
-.contacts-button:nth-child(2):hover {
+.contacts-button:nth-child(3):hover {
     background-color: #0A66C2;
   }
   
-.contacts-button:nth-child(3):hover {
+.contacts-button:nth-child(4):hover {
     background-color: #181616;
   }
   
- .contacts-button:nth-child(4):hover {
+ .contacts-button:nth-child(5):hover {
     background-color: #0866FF;
   }
   
-.contacts-button:nth-child(5):hover {
+.contacts-button:nth-child(6):hover {
     background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040);
   }
 
