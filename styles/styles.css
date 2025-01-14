@@ -1,565 +1,573 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F7FA;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
 
-    <link rel="shortcut icon" href="./imagine/cv.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-   
+/* main styles */
 
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1200px;
+    margin: 0 auto;
+}
 
-<body>
-    <svg width="0" height="0" class="hidden">
-        <symbol fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 512 512" id="linkedin">
-          <g id="7935ec95c421cee6d86eb22ecd125aef">
-            <path d="M116.504,500.219V170.654H6.975v329.564H116.504
-              L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941
-              C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219
-              c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533
-              c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531
-              c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z" fill="#FFFFFF"></path>
-          </g>
-        </symbol>
-      </svg>    
-      <svg width="0" height="0" class="hidden">
-        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="github">
-          <path d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z" fill="#FFFFFF"></path>
-          <path d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z" fill="#FFFFFF"></path>
-        </symbol>
-      </svg>    
-      <svg width="0" height="0" class="hidden">
-        <symbol fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 512 512" id="facebook">
-          <g id="7935ec95c421cee6d86eb22ecd11b7e3">
-            <path d="M283.122,122.174c0,5.24,0,22.319,0,46.583h83.424l-9.045,74.367h-74.379
-              c0,114.688,0,268.375,0,268.375h-98.726c0,0,0-151.653,0-268.375h-51.443v-74.367h51.443c0-29.492,0-50.463,0-56.302
-              c0-27.82-2.096-41.02,9.725-62.578C205.948,28.32,239.308-0.174,297.007,0.512c57.713,0.711,82.04,6.263,82.04,6.263
-              l-12.501,79.257c0,0-36.853-9.731-54.942-6.263C293.539,83.238,283.122,94.366,283.122,122.174z" fill="#FFFFFF"></path>
-          </g>
-        </symbol>
-      </svg>   
-      <svg width="0" height="0" class="hidden">
-        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#FFFFFF"></path>
-          <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#FFFFFF"></path>
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#FFFFFF"></path>
-        </symbol>
-      </svg>
-      <svg width="0" height="0" class="hidden">
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="telegram">
-          <defs></defs>
-          <path d="M40.83,8.48c1.14,0,2,1,1.54,2.86l-5.58,26.3c-.39,1.87-1.52,2.32-3.08,1.45L20.4,29.26a.4.4,0,0,1,0-.65L35.77,14.73c.7-.62-.15-.92-1.07-.36L15.41,26.54a.46.46,0,0,1-.4.05L6.82,24C5,23.47,5,22.22,7.23,21.33L40,8.69a2.16,2.16,0,0,1,.83-.21Z"></path>
-        </symbol>
-      </svg>    
-      
-    <!--Main-->
-    <div class="main">
-        <!--Main content-->
-        <div class="main-content">
-            <!-- About user -->
-            <div class="about">
-                <h2 class="about-position">
-                    Developer
-                </h2>
 
-                <h1 class="about-name">
-                    Vladyslav Pushyn
-                </h1>
+/* main-content */
 
-                <p class="about-description">
-                    I am a graduate of KNTU, specialty 121 “Software Engineering”, very motivated and tech-savvy, who wants to gain experience in programming. I have a strong foundation in programming principles, a love of technology, and a desire to participate in various projects.
-                </p>
-            </div>
-            <!--Projects-->
-            <div class="projects">
-                <details open class="desc">
-                    <summary data-open="Projects" data-close="Projects..." class="title">
-                    </summary>
-                    <div class="list">
-                        <ol class="projects-list">
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="1" href="https://github.com/HOKER1597/tic-tac-toe-C" target="_blank"
-                                class="project-link">github.com/tic-tac-toe-C</a> .....................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> C++, ncurses
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="2" href="https://magenta-hotteok-9aef19.netlify.app" target="_blank"
-                                class="project-link">pushyn.project.com</a> .................................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> HTML5, CSS3, JavaScript
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="3" href="https://github.com/HOKER1597/tic-tac-toe-Java" target="_blank"
-                                class="project-link">github.com/tic-tac-toe-Java</a> ...............................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Java
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="4" href="https://github.com/HOKER1597/Prototype5" target="_blank"
-                                class="project-link">github.com/Prototype5</a> .........................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Unity, C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="5" href="https://github.com/HOKER1597/Prototype4" target="_blank"
-                                class="project-link">github.com/Prototype4</a> .........................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Unity, C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="6" href="https://github.com/HOKER1597/Prototype3" target="_blank"
-                                class="project-link">github.com/Prototype3</a> .........................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Unity, C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="7" href="https://github.com/HOKER1597/Prototype2" target="_blank"
-                                class="project-link">github.com/Prototype2</a> .........................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Unity, C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="8" href="https://github.com/HOKER1597/Prototype1" target="_blank"
-                                class="project-link">github.com/Prototype1</a> ..........................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Unity, C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="9" href="https://github.com/HOKER1597/Roll_a_Ball" target="_blank"
-                                class="project-link">github.com/Roll_a_Ball</a> .........................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Unity, C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="10" href="https://darling-twilight-ee1b8f.netlify.app" target="_blank"
-                                class="project-link">pushyn.wezom.com</a> .................................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> HTML5, CSS3, JavaScript, Jquery
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="11" href="https://github.com/HOKER1597/snake-game" target="_blank"
-                                class="project-link">github.com/snake_game</a> .....................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Arduino IDE, Proteus, C
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="12" href="https://www.figma.com/file/QWmtuebvk84nniRtLx37FI/Design?type=design&node-id=0%3A1&t=GvZeZz2c7lNOA5ds-1" target="_blank"
-                                class="project-link">figma.com/banderogus_app</a> .............................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Design figma
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="13" href="https://github.com/HOKER1597/bandero_game" target="_blank"
-                                class="project-link">github.com/banderogus_game</a> ......................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Pyton
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="14" href="https://serene-mandazi-ffb088.netlify.app" target="_blank"
-                            class="project-link">Banderogus_site</a> ........................................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> HTML5, CSS3, JavaScript
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="15" href="https://github.com/HOKER1597/smart-greenhouse" target="_blank"
-                            class="project-link">github.com/smart_greenhouse</a> .......................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Arduino IDE, Proteus, C
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="16" href="https://github.com/HOKER1597/tic-tac-toe_android" target="_blank"
-                            class="project-link">github.com/tic-tac-toe_android</a> ......................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Android Studio, Java
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="17" href="https://github.com/HOKER1597/Go_game" target="_blank"
-                            class="project-link">github.com/Go_game</a> ......................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Android Studio, Java
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="18" href="https://github.com/HOKER1597/Flood_it_Part1" target="_blank"
-                                class="project-link">github.com/Flood_it</a> ................................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> Java
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="19" href="https://github.com/HOKER1597/temperature_calculator" target="_blank"
-                                class="project-link">github.com/temp_calculator</a> .............................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> C++
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                            <li class="project-item">
-                                <span class="project">
-                            <div class="href"><a id="20" href="https://github.com/HOKER1597/Async" target="_blank"
-                                class="project-link">github.com/Async</a> .....................................................</div>
-                            <span class="project-bracket">
-                                [
-                            </span> C#
-                                <span class="project-bracket">
-                                ]
-                            </span>
-                                </span>
-                            </li>
-                        </ol>
-                    </div>
-                </details>
-            </div>
-            <!--Work-->
-            <div class="work">
-                <details open class="desc">
-                    <summary data-open="Work Experience&darr;" data-close="Work Experience..." class="title">
-                    </summary>
-                    <div class="list">
-                        <!--Company 1-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Developer <span class="organization">UvoCorp</span>
-                            </h4>
-                            <p class="period">March 2023 - August 2024 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Added comments to each C# code, running and describing each program. (<a href="#20" class="work-project">project №20</a>).</li>
-                                <li class="work-list-item">Developed a small temperature calculator that calculates the average, minimum and maximum temperature as well as the number of temperatures greater than 50. (<a href="#19" class="work-project">project №19</a>).</li>
-                                <li class="work-list-item">Developed an application Flood it in which is generated a random field with different colors and you need to click on the field paint all in one color. (<a href="#18" class="work-project">project №18</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 2-->
-                        <div class="reveal company">
-                            <h4 class="work-position">С Developer (Thesis) <span class="organization">Kherson National Technical University</span>
-                            </h4>
-                            <p class="period">October 2023 - December 2023 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Developed the logic of the Go game.</li>
-                                <li class="work-list-item">Created a game interface.</li>
-                                <li class="work-list-item">Edited code for correct reading (<a href="#17" class="work-project">project №17</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 3-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Android Developer (Term Paper) <span class="organization">Kherson National Technical University</span>
-                            </h4>
-                            <p class="period">October 2023 - December 2023 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Developed the logic of the tic-tac-toe game.</li>
-                                <li class="work-list-item">Created a game interface.</li>
-                                <li class="work-list-item">Edited code for correct reading (<a href="#16" class="work-project">project №16</a>).</li>
-                            </ul>
-                        </div>
-                         <!--Company 4-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Arduino Developer (Term Paper) <span class="organization">Kherson National Technical University</span>
-                            </h4>
-                            <p class="period">February 2023 - May 2023 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Modeling the main components for a smart greenhouse in Proteus.</li>
-                                <li class="work-list-item">Developed the logic of the game.</li>
-                                <li class="work-list-item">Code optimization and commenting.(<a href="#15" class="work-project">project №15</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 5-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Courses <span class="organization">GO-IT</span>
-                            </h4>
-                            <p class="period">March 2023 - May 2023 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Developed design and website, which addedi working knokpi with transition and launching goose, fields for sending applications to the mail (<a href="#14" class="work-project">project №14</a>).</li>
-                                <li class="work-list-item">Developed a game about banderogus, in which you have to control the goose, catch boxes and avoid missiles (<a href="#13" class="work-project">project №13</a>).</li>
-                                <li class="work-list-item">Developed a mobile app design in which you choose where to launch a banderogusya to burn: moscow, ruble, chik-chik, bunker (<a href="#12" class="work-project">project №12</a>).</li>
-                            </ul>
-                        </div>
-                         <!--Company 6-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Arduino Developer (Term Paper) <span class="organization">Kherson National Technical University</span>
-                            </h4>
-                            <p class="period">October 2022 - December 2022 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Modeling the main components for the snake game in Proteus.</li>
-                                <li class="work-list-item">Developed the logic of the game.</li>
-                                <li class="work-list-item">Code optimization and commenting.(<a href="#11" class="work-project">project №11</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 7-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Front-End Developer (practice) <span class="organization">Wezom</span>
-                            </h4>
-                            <p class="period">09 February 2022 - 20 February 2022 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Collected of all icons in SVG Sprite.</li>
-                                <li class="work-list-item">Made deviations in vertical indents between elements no more than 5px (Pixel Perfect).</li>
-                                <li class="work-list-item">Adaptation at the determination of the performer but with an emphasis on UX.</li>
-                                <li class="work-list-item">Stylization of all links with the :hover pseudo-class, buttons are styled with the :hover and :active pseudo-classes.</li>
-                                <li class="work-list-item">The result of the task is published on a personal public repository + a link for a demonstration (<a href="#10" class="work-project">project №10</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 8-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Unity developer (during courses) <span class="organization">Unity</span>
-                            </h4>
-                            <p class="period">01 February 2022 - 08 February 2022 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">A game has been developed where you have to collect all the coins with the ball (<a href="#9" class="work-project">project №9</a>).</li>
-                                <li class="work-list-item">A game has been developed where you can drive a car and knock down boxes (<a href="#8" class="work-project">project №8</a>).</li>
-                                <li class="work-list-item">A game has been developed where you have to avoid animals running at the character (<a href="#7" class="work-project">project №7</a>).</li>
-                                <li class="work-list-item">A game has been developed where you have to jump over obstacles (<a href="#6" class="work-project">project №6</a>).</li>
-                                <li class="work-list-item">A game has been developed where you have to throw balls from the platform (<a href="#5" class="work-project">project №5</a>).</li>
-                                <li class="work-list-item">A game has been developed where you have to click on objects that fly out from below (<a href="#4" class="work-project">project №4</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 9-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Java developer (Term Paper) <span class="organization">Kherson National Technical University</span></h4>
-                            <p class="period">November 2021 - December 2021 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Developed the logic of the tic-tac-toe game.</li>
-                                <li class="work-list-item">Created a game interface.</li>
-                                <li class="work-list-item">Edited code for correct reading (<a href="#3" class="work-project">project №3</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 10-->
-                        <div class="reveal company">
-                            <h4 class="work-position">Front-End Developer <span class="organization">Kherson National Technical
-                            University</span></h4>
-                            <p class="period">October 2021 - December 2021 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Developed a multi-page web-site.</li>
-                                <li class="work-list-item">Developed a functional menu.</li>
-                                <li class="work-list-item">Developed a catalog with several books.</li>
-                                <li class="work-list-item">Added several books and their descriptions to the said catalog (<a href="#2" class="work-project">project №2</a>).</li>
-                            </ul>
-                        </div>
-                        <!--Company 11-->
-                        <div class="reveal company">
-                            <h4 class="work-position">C++ developer (Term Paper) <span class="organization">Kherson National Technical University</span></h4>
-                            <p class="period">November 2020 - December 2020 <span class="line">|</span> Ukraine</p>
-                            <ul class="work-list">
-                                <li class="work-list-item">Developed the logic of the tic-tac-toe game.</li>
-                                <li class="work-list-item">Created a game interface.</li>
-                                <li class="work-list-item">Divided each class into its own file.</li>
-                                <li class="work-list-item">Placed comments for correct reading of the code (<a href="#1" class="work-project">project №1</a>).</li>
-                            </ul>
-                        </div>
-                    </div>
-                </details>
-            </div>
-            <!--Education-->
-            <div class="education">
-                <h3 class="title">Education&darr;</h3>
-                <div class="reveal education">
-                    <h4 class="education-university">Kherson National Technical University</h4>
-                    <h4 class="education-position">Software engineering</h4>
-                    <p class="period">September 2020 - June 2024 <span class="line">|</span> Ukraine</p>
-                    <ul class="work-list"></ul>
-                    <li class="work-list-item">Level First (Bachelor's)</li>
-                    <li class="work-list-item">Specialty 121 Software engineering</li>
-                </div>
-                <div class="reveal education">
-                    <h4 class="education-university">Kherson National Technical University</h4>
-                    <h4 class="education-position">Software engineering</h4>
-                    <p class="period">September 2024 - December 2025 <span class="line">|</span> Ukraine</p>
-                    <ul class="work-list"></ul>
-                    <li class="work-list-item">Second level (Master's)</li>
-                    <li class="work-list-item">Specialty 121 Software engineering</li>
-                </div>
-            </div>
+.main-content {
+    background-color: #fff;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 105px 90px;
+}
 
-            <!--Form-->
-            <div class="reveal form-section">
-                <form action="#" class="form-conteiner" id="form" name="contact" netlify>
-                    <h3 class="title">Please write your message, and I'll reply.</h3>
-                    <div class="form-field-email">
-                        <input type="email" name="email" class="form-field-input" placeholder="Email">
-                    </div>
-                    <div class="form-field-text">
-                        <textarea type="text" name="text" class="form-field-textarea" id="user-message" placeholder="Message"></textarea>
-                    </div>
-                    <button class="form-button" id="launch-btn">Submit</button>
-                </form>
-            </div>
-        </div>
-        <!--Sidebar-->
-        <aside class="sidebar">
-            <img src="imagine\photo.jpg" alt="user photo" class="photo">
-            <!--Contacts-->
+.title {
+    display: inline;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1B1D1F;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-left: 0;
+}
 
-            <!--Tech skills-->
-            <div class="reveal tech-skills">
-                <h3 class="sidebar-title">Tech Skills</h3>
-                <ul class="tech-skills-list">
-                    <li class="tech-skills-item"><span class="tech-skills-text">HTML5</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">CSS3</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">JavaScript</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">GIT</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">C</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">C++</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">C#</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">Java</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">Unity</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">Pyton</span></li>
-                </ul>
-            </div>
-            <!--Soft Skills-->
-            <div class="reveal soft-skills">
-                <h3 class="sidebar-title">Soft Skills</h3>
-                <ul class="soft-skills-list">
-                    <li class="soft-skills-item"><span class="soft-skills-text">High commitment and flexibility</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Hands-on mentality</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">High degree of initiative</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Personal responsibility</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Teamwork</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Scrum</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Agile</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">GTD</span></li>
-                </ul>
-            </div>
-            <!-- Contacts link -->
-            <div class="reveal contacts-link">
-                <span class="sidebar-title">Contacts</span>
-                <div class="reveal contacts">
-                    <div>
-                        <p>
-                            <span class="contact-type">T: </span>
-                            <a href="tel:+77777777777" class="contact-link">+38 050 773 86 70</a>
-                        </p>
-                        <p>
-                            <span class="contact-type">E: </span>
-                            <a href="mailto:pushyn.vladyslav@gmail.com" class="contact-link">pushyn.vladyslav@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-                <div>
-                <a class="contacts-button" href="https://www.linkedin.com/in/pushyn-vladyslav1597/" target="_blank"><svg class="icon"><use xlink:href="#linkedin"></use></svg></a>
-                <a class="contacts-button" href="https://github.com/HOKER1597?tab=repositories" target="_blank"><svg class="icon"><use xlink:href="#github"></use></svg></a>
-                <a class="contacts-button" href="https://www.facebook.com/vlad.pusin/" target="_blank"><svg class="icon"><use xlink:href="#facebook"></use></svg></a>
-                <a class="contacts-button" href="https://www.instagram.com/acc0unt_name/" target="_blank"><svg class="icon"><use xlink:href="#instagram"></use></svg></a>
-                <a class="contacts-button" href="https://t.me/acc0unt_nam3" target="_blank"><svg class="icon"><use xlink:href="#telegram"></use></svg></a>
-                </div>
-              </div>
-        </aside>
 
-    </div>
-    <script src="./js/script.js"></script>
-</body>
+/* about styles */
 
-</html>
+.about {
+    margin-bottom: 40px;
+    animation: fade 1s ease-in;
+}
+
+.about-position {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1B1D1F;
+    margin-bottom: 20px;
+}
+
+.about-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    color: #1B1D1F;
+    margin-bottom: 25px;
+    margin-right: 230px;
+}
+
+.about-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    width: 500px;
+}
+
+
+/* project styles */
+
+.projects {
+    margin-bottom: 50px;
+    margin-left: 0;
+    animation: fade 1s ease-in;
+}
+
+.projects-list {
+    padding: 0;
+    margin-left: 25px;
+}
+
+.project-item,
+.project-bracket {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1B1D1F;
+}
+
+.project,
+.project-link,
+.href {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.href {
+    display: inline-block;
+    width: 300px;
+}
+
+.project-link {
+    margin-left: 10px;
+}
+
+
+/* work styles */
+
+.work {
+    margin-bottom: 45px;
+    display: flex;
+}
+
+.work-position {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1B1D1F;
+    margin-bottom: 10px;
+}
+
+.organization {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;
+}
+
+.period {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #A8A8A8;
+    margin-bottom: 10px;
+}
+
+.line {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1B1D1F;
+}
+
+.work-list {
+    padding: 0;
+    margin-left: 15px;
+}
+
+.work-list-item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    width: 525px;
+}
+
+.work-project {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1B1D1F;
+    text-decoration: none;
+}
+
+
+/* education styles */
+
+.education {
+    margin-bottom: 20px;
+}
+
+.education .title,
+.form-section .title {
+    cursor: text;
+}
+
+.education-university {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FB6D3A;
+}
+
+.education-position {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1B1D1F;
+}
+
+
+/* form sections stile */
+
+.form-section {
+    padding-top: 0px;
+    position: relative;
+}
+
+.form-conteiner {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 32px;
+    padding-bottom: 60px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.form-field-email,
+.form-field-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-field-email {
+    margin-bottom: 48px;
+    margin-top: 24px;
+}
+
+.form-field-text {
+    margin-bottom: 24px;
+}
+
+.form-field-label {
+    position: absolute;
+    pointer-events: none;
+    padding-left: 10px;
+    padding-top: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1B1D1F;
+    margin-bottom: 8px;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field-input,
+.form-field-textarea {
+    width: 453px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+
+.form-field-input{
+    height: 60px;
+}
+
+.form-field-textarea{
+    height: 250px;
+    resize: none;
+}
+
+.form-field-input:focus,
+.form-field-textarea:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+}
+
+.form-button {
+    background: #F5F7FA;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #1B1D1F;
+    border: none;
+    outline: none;
+    padding-top: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    transition: box-shadow .15s, transform .15s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+
+.form-button::before {
+    content: '';
+    width: 0;
+    height: 48px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-image: linear-gradient(to right, #FB6D3A 0%, #d5a797 100%);
+    transition: .5s ease;
+    display: flex;
+    z-index: -1;
+}
+
+.form-button:hover::before {
+    width: 144px;
+}
+
+.form-button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+/* sidebar styles */
+
+.sidebar {
+    background-color: rgba(30, 41, 57, 1);
+    padding-top: 40px;
+    width: 370px;
+}
+
+.photo {
+    width: 370px;
+    margin-bottom: 50px;
+    animation: fade .5s ease-in;
+}
+
+.sidebar-title {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+
+
+.tech-skills,
+.soft-skills,
+.contacts-link {
+    margin-left: 40px;
+}
+
+.tech-skills,
+.soft-skills {
+    padding-bottom: 45px;
+}
+
+.contact-type {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.contact-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8b8b8b;
+}
+
+.tech-skills-list,
+.soft-skills-list {
+    color: #FFFFFF;
+    padding: 0;
+    margin-left: 17px;
+}
+
+.tech-skills-item,
+.soft-skills-item {
+    color: #FB6D3A;
+}
+
+.tech-skills-text,
+.soft-skills-text {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+  
+  /* Contacts link */
+
+.contacts-link {
+    padding-bottom: 50px;
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+.contacts-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #313638;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+.icon {
+    width: 26px;
+    height: 26px;
+    padding-left: 12px;
+    padding-top: 10px;
+    fill: #fff;
+  }
+
+.contacts-button:nth-child(1):hover {
+    background-color: #0A66C2;
+  }
+  
+.contacts-button:nth-child(2):hover {
+    background-color: #181616;
+  }
+  
+ .contacts-button:nth-child(3):hover {
+    background-color: #0866FF;
+  }
+  
+.contacts-button:nth-child(4):hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040);
+  }
+
+  .contacts-button:nth-child(5):hover {
+    background: #27A7E7;
+  }
+
+/* drop-down list */
+
+details summary {
+    list-style: none;
+}
+
+details summary::before {
+    content: '\21AC';
+    transition: transform .4s ease, content .4s ease;
+}
+
+details[open] summary::before {
+    content: '\21AC';
+    transform: scaleX(-1) rotate(90deg);
+    display: inline-block;
+}
+
+details:not([open]) summary::before {
+    transform: scaleX(1) rotate(0deg);
+    content: '\21AC';
+    display: inline-block;
+}
+
+details.desc summary::after {
+    content: attr(data-close);
+}
+
+details.desc[open] summary::after {
+    content: attr(data-open);
+}
+
+
+/* animation */
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.active.company,
+.active.education {
+    animation: fade-right 1s ease-in;
+}
+
+.active.contacts,
+.active.tech-skills,
+.active.soft-skills,
+.active.contacts-link {
+    animation: fade-left 1s ease-in;
+}
+
+.active.form-section {
+    animation: fade 2s ease-in;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
