@@ -355,7 +355,7 @@ body {
     margin-bottom: 10px;
 }
 
-.contacts,
+
 .tech-skills,
 .soft-skills,
 .contacts-link {
@@ -363,8 +363,7 @@ body {
 }
 
 .tech-skills,
-.soft-skills,
-.contacts {
+.soft-skills {
     padding-bottom: 45px;
 }
 
