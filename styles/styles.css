@@ -622,6 +622,16 @@ details.desc[open] summary::after {
         opacity: 1;
         visibility: visible;
     }
+
+
+    .form-conteiner{
+        padding-left: 0;
+        width: 350px;
+        left: 0px;
+    }
+    .form-button {
+        padding-left: 0px;
+    }
 }
 
 /* Responsive Design */
@@ -642,7 +652,11 @@ details.desc[open] summary::after {
     }
     .form-field-input,
     .form-field-textarea {
-        width: 100%;
+        width: 300px;
+    }
+    .form-button {
+        width: 120px;
+        padding-left: 0px;
     }
 }
 
@@ -654,8 +668,7 @@ details.desc[open] summary::after {
         font-size: 24px;
     }
     .form-button {
-        width: 100%;
-        padding: 12px;
+        padding-left: 0px;
     }
-}
+} 
 
