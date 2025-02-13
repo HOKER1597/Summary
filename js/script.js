@@ -159,6 +159,22 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.style.overflow = "";
             sidebar.style.overflowY = "hidden";
         }
+        const techSkills = document.querySelector(".tech-skills");
+        const softSkills = document.querySelector(".soft-skills");
+        const contacts = document.querySelector(".contacts-link");
+        const contact = document.querySelector(".contacts");
+
+        if (!sidebar.classList.contains("active")) {
+            techSkills.style.animation = "none";
+            softSkills.style.animation = "none";
+            contacts.style.animation = "none";
+            contact.style.animation = "none";
+        } else {
+            techSkills.removeAttribute("style");
+            softSkills.removeAttribute("style");
+            contacts.removeAttribute("style");
+            contact.removeAttribute("style");
+        }
     });
 
     overlay.addEventListener("click", function () {
