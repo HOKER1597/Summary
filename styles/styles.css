@@ -583,7 +583,6 @@ details.desc[open] summary::after {
     }
 }
 
-/* Sidebar for mobile */
 @media (max-width: 1024px) {
     .sidebar {
         position: fixed;
@@ -632,9 +631,16 @@ details.desc[open] summary::after {
     .form-button {
         padding-left: 0px;
     }
+
+    .reveal.tech-skills,
+    .reveal.soft-skills,
+    .reveal.contacts-link,
+    .reveal.contacts {
+        opacity: 1 !important;
+        animation: none !important;
+    }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .about-name {
         font-size: 30px;
