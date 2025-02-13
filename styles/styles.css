@@ -1,6 +1,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #F5F7FA;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -9,17 +11,20 @@ body {
 .main {
     display: flex;
     flex-direction: row-reverse;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
-
 
 /* main-content */
 
 .main-content {
     background-color: #fff;
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
-    padding: 105px 90px;
+    padding: 50px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .title {
@@ -87,7 +92,7 @@ body {
 .project-item,
 .project-bracket {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 14px;
     line-height: 24px;
     color: #1B1D1F;
@@ -336,12 +341,15 @@ body {
 
 .sidebar {
     background-color: rgba(30, 41, 57, 1);
-    padding-top: 40px;
-    width: 370px;
+    padding: 20px;
+    width: 100%;
+    max-width: 370px;
+    flex-shrink: 0;
 }
 
 .photo {
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     margin-bottom: 50px;
     animation: fade .5s ease-in;
 }
@@ -451,7 +459,7 @@ body {
   }
 
   .contacts-button:nth-child(5):hover {
-    background: #27A7E7;
+    background: linear-gradient(45deg,#27A7E7,#229ED9);
   }
 
 /* drop-down list */
@@ -569,5 +577,59 @@ details.desc[open] summary::after {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content {
+        width: 100%;
+        padding: 30px;
+    }
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    .form-conteiner {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-name {
+        font-size: 30px;
+        line-height: 40px;
+        margin-right: 0;
+    }
+    .about-description {
+        width: 100%;
+    }
+    .projects-list {
+        margin-left: 10px;
+    }
+    .work-list-item {
+        width: 100%;
+    }
+    .form-field-input,
+    .form-field-textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+    .about-name {
+        font-size: 24px;
+    }
+    .form-button {
+        width: 100%;
+        padding: 12px;
     }
 }
