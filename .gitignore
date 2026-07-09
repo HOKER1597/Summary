@@ -1,0 +1,6 @@
+.vs/
+node_modules/
+*.log
+cv-react/
+.playwright-mcp/
+Сайт-резюме*.html

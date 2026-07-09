@@ -59,28 +59,34 @@
         </symbol>
     </svg>    
       
+    <!-- Language switcher -->
+    <div class="lang-switch" id="lang-switch">
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="uk">UA</button>
+    </div>
+
     <!--Main-->
     <div class="main">
         <!--Main content-->
         <div class="main-content">
             <!-- About user -->
             <div class="about">
-                <h2 class="about-position">
-                    Developer
+                <h2 class="about-position" data-i18n="about.position">
+                    Full-Stack / Vibe Coding Developer
                 </h2>
 
-                <h1 class="about-name">
+                <h1 class="about-name" data-i18n="about.name">
                     Vladyslav Pushyn
                 </h1>
 
-                <p class="about-description">
-                    I am a graduate of KNTU, specialty 121 “Software Engineering”, very motivated and tech-savvy, who wants to gain experience in programming. I have a strong foundation in programming principles, a love of technology, and a desire to participate in various projects.
+                <p class="about-description" data-i18n="about.desc">
+                    Python Full-Stack Developer / AI Engineer with 2+ years of commercial experience, specializing in AI-integrated products for e-commerce. As the sole developer in a 5-person team, I designed, built and shipped 11 production projects end-to-end — from architecture to CI/CD. I work across the full stack (FastAPI + React/TypeScript) with a strong focus on LLM integration, AI-assisted development and clean, tested code.
                 </p>
             </div>
             <!--Projects-->
             <div class="projects">
                 <details open class="desc">
-                    <summary data-open="Projects" data-close="Projects..." class="title">
+                    <summary data-open="Open Source Projects" data-close="Open Source Projects..." data-i18n-open="ui.projectsOpen" data-i18n-close="ui.projectsClose" class="title">
                     </summary>
                     <div class="list">
                         <ol class="projects-list">
@@ -182,7 +188,7 @@
                             </li>
                             <li class="project-item">
                                 <span class="project">
-                            <div class="href"><a id="9" href="https://github.com/HOKER1597/RollABall" target="_blank"
+                            <div class="href"><a id="9" href="https://github.com/HOKER1597/Roll_a_Ball" target="_blank"
                                 class="project-link">github.com/RollABall</a> ..............................................</div>
                             <span class="project-bracket">
                                 [
@@ -206,7 +212,7 @@
                             </li>
                             <li class="project-item">
                                 <span class="project">
-                            <div class="href"><a id="11" href="https://github.com/HOKER1597/SnakeGame" target="_blank"
+                            <div class="href"><a id="11" href="https://github.com/HOKER1597/snake-game" target="_blank"
                                 class="project-link">github.com/SnakeGame</a> ......................................</div>
                             <span class="project-bracket">
                                 [
@@ -367,9 +373,35 @@
             <!--Work-->
             <div class="work">
                 <details open class="desc">
-                    <summary data-open="Work Experience&darr;" data-close="Work Experience..." class="title">
+                    <summary data-open="Work Experience&darr;" data-close="Work Experience..." data-i18n-open="ui.workOpen" data-i18n-close="ui.workClose" class="title">
                     </summary>
-                    <div class="list">
+                    <div class="list" data-i18n="work.list">
+                        <!--Company 0 (current)-->
+                        <div class="reveal company">
+                            <h4 class="work-position">Python Full-Stack Developer / AI Engineer <span class="organization">Amzprofessional</span>
+                            </h4>
+                            <p class="period">August 2025 - August 2026 <span class="line">|</span> Remote</p>
+                            <ul class="work-list">
+                                <li class="work-list-item">Sole developer of 11 production projects within a 5-person Amazon e-commerce team — full cycle from architecture to CI/CD and production deployment (50K+ lines of backend, 30K+ frontend).</li>
+                                <li class="work-list-item">Built a unified internal platform integrating 5 AI tools with SSO auth (Keycloak), history, export, admin panel and i18n — FastAPI + React, Docker, HashiCorp Nomad, GitLab CI/CD.</li>
+                                <li class="work-list-item">Developed multi-stage AI content pipelines for Amazon listings (titles, bullets, descriptions, keywords) using NLP, OpenAI embeddings, cosine relevance and LLM APIs (OpenAI / Claude / Gemini via OpenRouter).</li>
+                                <li class="work-list-item">Engineered large-scale web scrapers processing thousands of Amazon pages (curl_cffi, BeautifulSoup, proxy rotation, browser impersonation) with async ETL into PostgreSQL.</li>
+                                <li class="work-list-item">Delivered an audio/video transcription service with real-time speaker diarization (PyTorch / faster-whisper, WebSockets) in web and desktop builds.</li>
+                                <li class="work-list-item">Built a product analytics &amp; returns system with TF-IDF review clustering, keyword scoring and AI recommendations, plus a KPI/bonus system with scoring formulas, dashboards and Excel export.</li>
+                                <li class="work-list-item">Wrote clean, tested code following Clean Architecture — pytest (883+ tests), Vitest and Playwright E2E with video evidence.</li>
+                            </ul>
+                        </div>
+                        <!--Company DataArt-->
+                        <div class="reveal company">
+                            <h4 class="work-position">QA Automation Engineer <span class="organization">DataArt</span>
+                            </h4>
+                            <p class="period">January 2025 - February 2025 <span class="line">|</span> Remote</p>
+                            <ul class="work-list">
+                                <li class="work-list-item">Completed a university internship performing automated website testing in C#.</li>
+                                <li class="work-list-item">Built a custom test-automation framework to simplify test authoring and published it publicly (<a href="https://github.com/HOKER1597/Framework" target="_blank" class="work-project">github.com/Framework</a>).</li>
+                                <li class="work-list-item">Earned the highest score for the internship.</li>
+                            </ul>
+                        </div>
                         <!--Company 1-->
                         <div class="reveal company">
                             <h4 class="work-position">Python Developer (Term Paper) <span class="organization">Kherson National Technical University</span>
@@ -379,7 +411,7 @@
                                 <li class="work-list-item">Developed the core functionality for banking operations, including transaction processing and account management.</li>
                                 <li class="work-list-item">Implemented features for calculating interest rates and assessing risks.</li>
                                 <li class="work-list-item">Created a user interface for interacting with banking services.</li>
-                                <li class="work-list-item">Optimized the system for secure data handling and efficient transaction processing (<a href="#23" class="work-project">project №23</a>).</li>
+                                <li class="work-list-item">Created a user interface for interacting with banking services (<a href="#23" class="work-project">project №23</a>).</li>
                             </ul>
                         </div>
                         <!--Company 2-->
@@ -531,36 +563,38 @@
             </div>
             <!--Education-->
             <div class="education">
-                <h3 class="title">Education&darr;</h3>
+                <h3 class="title" data-i18n="education.title">Education&darr;</h3>
                 <div class="reveal education">
-                    <h4 class="education-university">Kherson National Technical University</h4>
-                    <h4 class="education-position">Software engineering</h4>
-                    <p class="period">September 2020 - June 2024 <span class="line">|</span> Ukraine</p>
+                    <h4 class="education-university" data-i18n="edu1.uni">Kherson National Technical University</h4>
+                    <h4 class="education-position" data-i18n="edu1.pos">Software engineering</h4>
+                    <p class="period" data-i18n="edu1.period">September 2020 - June 2024 <span class="line">|</span> Ukraine</p>
                     <ul class="work-list"></ul>
-                    <li class="work-list-item">Level First (Bachelor's)</li>
-                    <li class="work-list-item">Specialty 121 Software engineering</li>
+                    <li class="work-list-item" data-i18n="edu1.l1">Level First (Bachelor's)</li>
+                    <li class="work-list-item" data-i18n="edu1.l2">Specialty 121 Software engineering</li>
                 </div>
                 <div class="reveal education">
-                    <h4 class="education-university">Kherson National Technical University</h4>
-                    <h4 class="education-position">Software engineering</h4>
-                    <p class="period">September 2024 - December 2025 <span class="line">|</span> Ukraine</p>
+                    <h4 class="education-university" data-i18n="edu2.uni">Kherson National Technical University</h4>
+                    <h4 class="education-position" data-i18n="edu2.pos">Software engineering</h4>
+                    <p class="period" data-i18n="edu2.period">September 2024 - December 2025 <span class="line">|</span> Ukraine</p>
                     <ul class="work-list"></ul>
-                    <li class="work-list-item">Second level (Master's)</li>
-                    <li class="work-list-item">Specialty 121 Software engineering</li>
+                    <li class="work-list-item" data-i18n="edu2.l1">Second level (Master's)</li>
+                    <li class="work-list-item" data-i18n="edu2.l2">Specialty 121 Software engineering</li>
                 </div>
             </div>
 
             <!--Form-->
             <div class="reveal form-section">
-                <form action="#" class="form-conteiner" id="form" name="contact" netlify>
-                    <h3 class="title">Please write your message, and I'll reply.</h3>
+                <form action="#" class="form-conteiner" id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden-field" aria-hidden="true"><label>Leave this empty: <input name="bot-field"></label></p>
+                    <h3 class="title" data-i18n="form.title">Please write your message, and I'll reply.</h3>
                     <div class="form-field-email">
-                        <input type="email" name="email" class="form-field-input" placeholder="Email">
+                        <input type="email" name="email" class="form-field-input" placeholder="Email" data-i18n-ph="form.emailPh">
                     </div>
                     <div class="form-field-text">
-                        <textarea type="text" name="text" class="form-field-textarea" id="user-message" placeholder="Message"></textarea>
+                        <textarea type="text" name="text" class="form-field-textarea" id="user-message" placeholder="Message" data-i18n-ph="form.messagePh"></textarea>
                     </div>
-                    <button class="form-button" id="launch-btn">Submit</button>
+                    <button class="form-button" id="launch-btn" data-i18n="form.submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -571,43 +605,45 @@
 
             <!--Tech skills-->
             <div class="reveal tech-skills">
-                <h3 class="sidebar-title">Tech Skills</h3>
+                <h3 class="sidebar-title" data-i18n="ui.techSkills">Tech Skills</h3>
                 <ul class="tech-skills-list">
-                    <li class="tech-skills-item"><span class="tech-skills-text">HTML5</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">CSS3</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">JavaScript</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">GIT</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">C</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">C++</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">C#</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">Java</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">Unity</span></li>
-                    <li class="tech-skills-item"><span class="tech-skills-text">Pyton</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">Python</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">FastAPI</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">React</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">TypeScript</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">Node.js</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">PostgreSQL</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">Docker</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">CI/CD</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">LLM APIs (OpenAI / Claude)</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">Playwright</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">Tailwind CSS</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">Git</span></li>
+                    <li class="tech-skills-item"><span class="tech-skills-text">HTML5 / CSS3</span></li>
                 </ul>
             </div>
             <!--Soft Skills-->
             <div class="reveal soft-skills">
-                <h3 class="sidebar-title">Soft Skills</h3>
-                <ul class="soft-skills-list">
-                    <li class="soft-skills-item"><span class="soft-skills-text">High commitment and flexibility</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Hands-on mentality</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">High degree of initiative</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Personal responsibility</span></li>
+                <h3 class="sidebar-title" data-i18n="ui.softSkills">Soft Skills</h3>
+                <ul class="soft-skills-list" data-i18n="soft.list">
+                    <li class="soft-skills-item"><span class="soft-skills-text">Ownership &amp; end-to-end delivery</span></li>
+                    <li class="soft-skills-item"><span class="soft-skills-text">Self-management</span></li>
+                    <li class="soft-skills-item"><span class="soft-skills-text">Problem solving</span></li>
+                    <li class="soft-skills-item"><span class="soft-skills-text">Fast learning</span></li>
+                    <li class="soft-skills-item"><span class="soft-skills-text">Clear communication</span></li>
                     <li class="soft-skills-item"><span class="soft-skills-text">Teamwork</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Scrum</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">Agile</span></li>
-                    <li class="soft-skills-item"><span class="soft-skills-text">GTD</span></li>
+                    <li class="soft-skills-item"><span class="soft-skills-text">Agile / Scrum</span></li>
                 </ul>
             </div>
             <!-- Contacts link -->
             <div class="reveal contacts-link">
-                <span class="sidebar-title">Contacts</span>
+                <span class="sidebar-title" data-i18n="ui.contacts">Contacts</span>
                 <div class="reveal contacts">
                     <div>
-                         <!--<p>
+                        <p>
                             <span class="contact-type">T: </span>
                             <a href="tel:+77777777777" class="contact-link">+38 050 773 86 70</a>
-                        </p>-->
+                        </p>
                         <p>
                             <span class="contact-type">E: </span>
                             <a href="mailto:pushyn.vladyslav@gmail.com" class="contact-link">pushyn.vladyslav@gmail.com</a>
@@ -625,6 +661,7 @@
         </aside>
 
     </div>
+    <script src="./js/i18n.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

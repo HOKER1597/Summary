@@ -99,38 +99,67 @@ if (goToFormButton) {
 }
 
 function clearFormFields() {
-    const modalFields = form.querySelectorAll('input');
+    const modalFields = form.querySelectorAll('input:not([type="hidden"]), textarea');
 
     modalFields.forEach(field => {
         field.value = '';
     });
 }
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const formData = new FormData(form);
+// Повідомлення про статус відправки форми
+let formMessage = document.querySelector('#form-message');
+if (form && !formMessage) {
+    formMessage = document.createElement('p');
+    formMessage.id = 'form-message';
+    formMessage.className = 'form-message';
+    formMessage.setAttribute('role', 'status');
+    form.appendChild(formMessage);
+}
 
-    launchBtn.setAttribute('disabled', true);
+let formMessageTimeout = null;
 
-    if (userEmailField?.value?.length > 30) {
-        return;
-    }
+function showFormMessage(text, isError = false) {
+    if (!formMessage) return;
+    formMessage.textContent = text;
+    formMessage.classList.toggle('error', isError);
+    formMessage.classList.add('active');
 
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-    })
-        .then(() => {
-            showGooseAnim();
+    if (formMessageTimeout) clearTimeout(formMessageTimeout);
+    formMessageTimeout = setTimeout(() => {
+        formMessage.classList.remove('active');
+    }, 5000);
+}
 
-            setTimeout(() => {
-                // launchBtn.removeAttribute('disabled')
-                // clearFormFields();
-            }, 2000);
+if (form) {
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        launchBtn.setAttribute('disabled', true);
+
+        if (userEmailField?.value?.length > 30) {
+            launchBtn.removeAttribute('disabled');
+            return;
+        }
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
         })
-        .catch((error) => console.log('Sending form failed'));
-});
+            .then(() => {
+                clearFormFields();
+                const msg = window.i18nT ? window.i18nT('form.success', 'Your message has been sent. Thank you!') : 'Your message has been sent. Thank you!';
+                showFormMessage(msg);
+                launchBtn.removeAttribute('disabled');
+            })
+            .catch(() => {
+                const msg = window.i18nT ? window.i18nT('form.error', 'Something went wrong. Please try again.') : 'Something went wrong. Please try again.';
+                showFormMessage(msg, true);
+                launchBtn.removeAttribute('disabled');
+            });
+    });
+}
 
 // === Логіка для сайдбару ===
 document.addEventListener("DOMContentLoaded", function () {
